@@ -1,21 +1,22 @@
 const SuperObject = require("./index");
 
-describe("matching cities to foods", () => {
+describe("matching superObject with global object", () => {
   const superObject = SuperObject("oppapa", 5);
   let globalSalary = 0;
   beforeEach(() => {
     globalSalary = 1000;
+    superObject.setSum(1000);
   });
 
   afterEach(() => {
     globalSalary = 0;
   });
 
-  test("city database has Vienna", () => {
-    expect(superObject.sum(10)).toBeGreaterThan(3);
+  test("test sum", () => {
+    expect(superObject.sum(10)).toBe(1050);
   });
 
-  test("city database has San Juan", () => {
-    expect(superObject.globalSum(10)).toBeGreaterThan(3);
+  test("test global sum", () => {
+    expect(superObject.globalSum(10)).toBe(64);
   });
 });

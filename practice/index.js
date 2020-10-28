@@ -13,6 +13,7 @@ export function initializeGrids() {
   for (let i = 0; i < rows; i++) {
     grid[i] = new Array(cols);
   }
+  return grid;
 }
 
 export function resetGrids() {

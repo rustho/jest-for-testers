@@ -7,6 +7,9 @@ const SuperObject = (type, multiple) => {
       salary += num * multiple;
       return salary;
     },
+    setSum: (num) => {
+      salary = num;
+    },
     globalSum: (num) => {
       globalSalary += num * multiple;
       return globalSalary;
